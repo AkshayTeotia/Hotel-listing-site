@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      body {
+        
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(255, 245, 206);
+            display: flex;
+        }
+
+        .navbar {
+            background-color: #161212;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 240px;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        .menu li {
+            margin-bottom: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: goldenrod;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color:rgb(248, 238, 207);
+        }
+
+        #card {
+            position:absolute;
+            top: 50px;
+            margin-left: 270px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .cards {
+            width: 300px;
+            height: 220px;
+            border: 1px solid #ccc;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 20px;
+            background:linear-gradient(rgba(255, 217, 0, 0.57),rgb(222, 196, 133),rgb(255, 254, 254));
+            text-align: left;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start; 
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .cards:hover {
+            transform: translateY(-30px);
+           
+        }
+
+        #image {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .name {
+            color: rgb(138, 84, 15);
+            font-size: 20px;
+            margin-bottom: 0;
+            position: absolute;
+            left:120px;
+            top:30px;
+        }
+        .description{
+            font-size: small;
+            text-align: justify;
+            border-radius: 12px;
+            background-color: rgb(240, 227, 184);
+            color: rgb(116, 85, 8);
+            padding: 10px;
+        }
+        .fa.fa-star{
+            display: inline-flex;
+        }
+        .checked{
+            color: goldenrod;
+        }
+        .rating{
+            position: absolute;
+            top: 92%; 
+            right: 18px;
+            display: flex;
+        }
+        .hotel-info {
+            display: flex;
+            align-items: center;
+        }
+        #top{
+            position:absolute;
+            height: 50px;
+            width: 100%;
+            background-color:rgb(252, 208, 63);
+        }
+        .line1{
+            position:absolute;
+            right:10px;
+            top:10px;
+            height:5px;
+            width:60px;
+            background-color: #161212;
+        }
+        .line2{
+            position:absolute;
+            right:10px;
+            top:18px;
+            height:5px;
+            width:60px;
+            background-color: #161212;
+        }
+
+        .line3{
+            position:absolute;
+            right:10px;
+            top:26px;
+            height:5px;
+            width:60px;
+            background-color: #161212;
+        }
+        table{
+            
+            border-radius: 10px;
+            position: relative;
+            background: radial-gradient(goldenrod,white);
+        }
+        .imag{
+            height:8.5cm;
+            border-radius:5px;
+            padding: 5px; 
+            padding-left: 20px;           
+            
+        }
+        tr{
+            animation: transform;
+        }
+        tr:hover{
+            transform: scale(1.03);
+        
+        }
+        .data{
+            max-width: 460px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding-top: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: justify;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+        .unchecked{
+            color:rgb(99, 93, 93);
+        }
+        .heading{
+
+            padding-left: 30px;
+            
+            
+        }
+        #bottom{
+            position: relative;
+            left: auto;
+           
+
+            
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+    
+    <div class="navbar">
+        <div class="logo">
+            <img src="Gold Exclusive Royal Luxury Hotel Logo (1).png" alt="Logo">
+        </div>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+    <div id="card">
+        <div class="cards">
+            <img id="image" src="hotel1.png">
+            <a href="#"><h1 class="name">Sahara Star</h1>
+            <p class="description">
+                Current Price:₹12,000 per day<br>
+                Contact:<br>
+                Domestic Airport, 400099, Mumbai, India
+               <br>
+                Telephone: +91(22)0962 6202 | Fax: +91(22)3989 9541 </p>
+            <div class="rating"><i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star unchecked"></i>
+        </a>
+        </div>
+        </div>
+        <div class="cards">
+            <img id="image" src="hotel2.png">
+            <a href="#"><h1 class="name">City guest House</h1>
+            <p class="description">
+                Current Price:₹17,000 per day<br>
+                Contact:<br>
+                st road, Near Milan Subway ,Santacruz west, 400054, Mumbai, India
+               <br>
+                Telephone: +91(22)3367 5000 | Fax: +91(22)1138 5001 </p>
+            <div class="rating"><i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star unchecked"></i>
+            <i class="fa fa-star unchecked"></i>
+        </a>
+        </div>
+        </div>
+        <div class="cards">
+            <img id="image" src="hotel3.png">
+          <a href="#">  <h1 class="name">Hotel Park View</h1> 
+            <p class="description">
+                Current Price:₹16,500 per day<br>
+            Contact:<br>
+           Framroz Court, Dada Saheb Phalke Marg, Dadar, 400014, Mumbai, India
+           <br>
+            Telephone: +91(22)3989 8937 | Fax: +91(22)3989 8251 </p>
+            <div class="rating"><i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star unchecked"></i>
+        </a>
+        </div>
+        </div><div class="cards">
+            <img id="image" src="hotel4.png">
+           <a href="#"> <h1 class="name">Hotel Mirage</h1>
+            <p class="description">
+                Current Price:₹13,000 per day<br>
+            Contact:<br>
+            4/277 I.B Patel Road, Behind Hp Petrol, 400063, Mumbai, India
+
+           <br>
+            Telephone: +91(22)3989 3550 | Fax: +91(22)3989 5231 </p>
+            <div class="rating"><i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star unchecked"></i>
+            <i class="fa fa-star unchecked"></i>
+            <i class="fa fa-star unchecked"></i>
+        </a>
+        </div>
+        </div><div class="cards">
+            <img id="image" src="hotel5.png">
+           <a href="#"> <h1 class="name">Hotel Milan</h1>
+            <p class="description">
+            Current Price:₹17,400 per day<br>
+            Contact:<br>
+            Internacional Airport Approach Road, 400059, Mumbai, India
+           <br>
+            Telephone: +91(22)3989 5670 | Fax: +9145553989 5001
+
+            </p>
+            <div class="rating"><i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+        </a>
+        </div>
+        </div><div class="cards">
+            <img id="image" src="hotel6.png">
+           <a href="#"> <h1 class="name">Hyat Centric</h1>
+            <p class="description">
+                Current Price:₹15,016 per day<br>
+                Contact:<br>
+                221/225, P. D'Mello Road, 400001, Mumbai, India
+               <br>
+                Telephone: +91(22)3989 5600 | Fax: +91(22)3989 5901
+            </p>
+            <div class="rating"><i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star checked"></i>
+            <i class="fa fa-star unchecked"></i>
+        </a>
+        </div>
+        </div>
+        
+   <div id="bottom">
+    <table>
+        <tr class="bottom-images">
+            <td>
+                <img class ="imag" src="image1.png" width="485px">
+
+            </td>
+            <td><h2 class="heading">About Sahara Star </h2>
+                <p  class="data">Offering four food & beverage establishments and hundreds of rooms, 
+                Sahara Star is known for its distinctive, star-shaped dome. It houses a 4,000 square 
+                foot Marine Aquarium, and has the world's only private dining room within an aquarium.
+                All guest rooms at this hotel are equipped with modern amenities such as flat-screen TVs,
+                motorized curtains, and glass bathrooms. Mood lighting is standard, and luxury suites are
+                available. The hotel's services include airline reservations, babysitting, courier 
+                services, currency exchange, and laundry. Guests can enjoy a full gymnasium while at 
+                this property, or stroll around the tropical lagoon. The hotel's restaurants include 
+                The Earth Plate, which has truly global cuisine. </p>
+            
+            </td>
+        </tr>
+        <tr class="bottom-images">
+            <td>
+                <img class ="imag" src="image2.png" width="485px">
+
+            </td>
+            <td><h2 class="heading">About Hotel Mirage</h2>
+                <p  class="data">Conveniently located in the heart of North Mumbai Business District and 
+                a short drive from Chatrapathi Shivaji International Airport, Hotel Mirage Bombain is a 
+                modern hotel that offers luxury accommodations. All individually decorated rooms have-screen
+                TVs, air conditioning, climate control, a coffee/tea maker, private bathroom with 
+                deep soaking bathtub, free bottled water, desk, and a minibar. Hotel Mirage Bombain features
+                a 24-hour front desk, conference centre, computer station, free newspapers in the lobby,
+                24-hour fitness facilities, full-service spa, free parking, safety deposit boxes at the 
+                reception, and wedding services.</p>
+            
+            </td>
+        </tr>
+        <tr class="bottom-images">
+            <td>
+                <img class ="imag" src="image3.png" width="485px">
+
+            </td>
+            <td><h2 class="heading">About Park View Hotel</h2>
+                <p  class="data">Located in Andheri East, Park View Hotel is a perfect starting point from
+                which to explore Mumbai. The hotel offers guests a range of services and amenities designed 
+                to provide comfort and convenience. 24-hour room service, free Wi-Fi in all rooms, 24-hour 
+                front desk, facilities for disabled guests, Wi-Fi in public areas are there for guest's 
+                enjoyment. Guestrooms are designed to provide an optimal level of comfort with welcoming 
+                decor and some offering convenient amenities like sofa, air conditioning, wake-up service, 
+                desk, blackout curtains.</p>
+            
+            </td>
+        </tr>
+        
+    </table>
+</div>
+</div>
+        
+</div>
+</body>
+</html>
